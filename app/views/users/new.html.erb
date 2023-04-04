@@ -1,0 +1,28 @@
+
+<%= form_with model: @user, url: users_path do |form| %>
+  
+  <% if @user.errors.any? %>
+    <ul>
+    <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  <% end %>
+    
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :phone_number %>
+  <%= form.telephone_field :phone_number %>
+
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+
+  <%= form.label :password_confirmation %>
+  <%= form.password_field :password_confirmation %>
+
+  <%= form.submit "Sign up" %>
+
+  <% form_authenticity_token %>
+    
+<% end %>

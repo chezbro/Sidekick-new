@@ -1,0 +1,11 @@
+<h1>Conversations</h1>
+<ul>
+  <% @conversations.each do |conversation| %>
+    <li>
+      <%= link_to conversation.id, conversation_path(conversation) %>
+    </li>
+  <% end %>
+</ul>
+
+
+<%= link_to "Start a new conversation", conversations_path, method: :post %>

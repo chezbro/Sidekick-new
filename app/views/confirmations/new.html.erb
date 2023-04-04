@@ -1,0 +1,7 @@
+<h1>Enter Your Verification Code</h1>
+
+<%= form_with url: confirmations_path, method: :post do |f| %>
+  <%= f.label :code, "Verification Code:" %>
+  <%= f.text_field :code, autofocus: true %>
+  <%= f.submit "Submit" %>
+<% end %>
