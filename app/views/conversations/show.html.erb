@@ -1,6 +1,7 @@
 <!-- app/views/conversations/show.html.erb -->
 
 <h1>Your Conversation <%= @conversation.id %></h1>
+<h4><%= current_user.phone_number %></h4>
 
 <div id="messages">
   <% @conversation.messages.each do |message| %>

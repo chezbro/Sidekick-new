@@ -80,6 +80,7 @@ gem 'twilio-ruby'
 gem 'phonelib'
 gem 'pry', '~> 0.13.1'
 gem "ruby-openai"
+gem "clockwork"
 group :development do
  gem 'rack-webconsole'
 end
